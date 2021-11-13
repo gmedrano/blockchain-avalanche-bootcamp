@@ -1,6 +1,6 @@
 {
 	"compiler": {
-		"version": "0.8.7+commit.e28d00a7"
+		"version": "0.8.0+commit.c7dfd78e"
 	},
 	"language": "Solidity",
 	"output": {
@@ -22,6 +22,25 @@
 				],
 				"name": "NewScore",
 				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_reward",
+						"type": "uint256"
+					}
+				],
+				"name": "calculateScoreBonus",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
 			},
 			{
 				"inputs": [],
@@ -65,7 +84,7 @@
 		"compilationTarget": {
 			"contracts/calculator.sol": "Score"
 		},
-		"evmVersion": "london",
+		"evmVersion": "istanbul",
 		"libraries": {},
 		"metadata": {
 			"bytecodeHash": "ipfs"
@@ -78,11 +97,11 @@
 	},
 	"sources": {
 		"contracts/calculator.sol": {
-			"keccak256": "0xbf41915d836bf4f2ae220b821c372c03b5d65010da1d4353cfd882f2c2c9528e",
+			"keccak256": "0x91f5cece995543190f4542c93f305e4c526940aafdbd40c89fefe83cd2365bd1",
 			"license": "UNLICENSED",
 			"urls": [
-				"bzz-raw://c030c17f4e0b0b09ee5d82e6eb3a30ae9146528676eb9cb88d0fdb4e76aa4f3f",
-				"dweb:/ipfs/QmXwUYrbDYnA8SocuhPixApsScqfZQ7F4pugPt7uPobLVu"
+				"bzz-raw://411da45fb458fca93f9e7c3257b84f132a2dbd77a2a5d0d7e018b298b839ff18",
+				"dweb:/ipfs/QmNTWRP3GhgPAQpRvHHkBDEaUKs6Y3dX2z9Sn1o8u2QS4H"
 			]
 		}
 	},

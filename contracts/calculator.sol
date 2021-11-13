@@ -5,7 +5,7 @@ pragma solidity ^0.8.0;
 contract Score {
     uint score;
     address owner;
-    
+
     event NewScore(uint _newScore);
     
     constructor() {
@@ -16,6 +16,11 @@ contract Score {
         if(msg.sender == owner) {
             _;
         }
+    }
+    
+    function calculateScoreBonus(uint _reward) public returns (uint) {
+        score = score * _reward;
+        return score;
     }
     
     function getScore() public view returns (uint) {
