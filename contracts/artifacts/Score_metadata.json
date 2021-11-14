@@ -82,7 +82,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/calculator.sol": "Score"
+			"contracts/score.sol": "Score"
 		},
 		"evmVersion": "istanbul",
 		"libraries": {},
@@ -96,7 +96,7 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/calculator.sol": {
+		"contracts/score.sol": {
 			"keccak256": "0x91f5cece995543190f4542c93f305e4c526940aafdbd40c89fefe83cd2365bd1",
 			"license": "UNLICENSED",
 			"urls": [
