@@ -6,6 +6,8 @@ contract VolcanoCoin {
     uint totalSupply;
     address owner;
     
+    mapping(address => uint) balances;
+    
     uint constant SUPPLY_INCREASE = 1000;
     
     event SupplyChanged(uint _newSupply);
@@ -13,6 +15,7 @@ contract VolcanoCoin {
     constructor() {
         totalSupply = 10000;
         owner = msg.sender;
+        balances[owner] = totalSupply;
     }
     
     modifier onlyOwner() {
@@ -28,6 +31,19 @@ contract VolcanoCoin {
     
     function getTotalSupply() public view returns (uint) {
         return totalSupply;
+    }
+    
+    function transferCoins(address _receiver, uint _amount) public onlyOwner {
+        balances[owner] = balances[owner] - _amount;
+        balances[_receiver] = balances[_receiver] + _amount;
+    }
+    
+    function setBalance(uint _amount) public onlyOwner {
+        balances[owner] = _amount;
+    }
+    
+    function getBalance() public view returns (uint) {
+        return balances[owner];
     }
     
 }
