@@ -11,6 +11,7 @@ contract VolcanoCoin {
     uint constant SUPPLY_INCREASE = 1000;
     
     event SupplyChanged(uint _newSupply);
+    event TransferSent(address _receiver, uint _amount);
     
     constructor() {
         totalSupply = 10000;
@@ -36,6 +37,8 @@ contract VolcanoCoin {
     function transferCoins(address _receiver, uint _amount) public onlyOwner {
         balances[owner] = balances[owner] - _amount;
         balances[_receiver] = balances[_receiver] + _amount;
+        
+        emit TransferSent(_receiver, _amount);
     }
     
     function setBalance(uint _amount) public onlyOwner {

@@ -24,6 +24,25 @@
 				"type": "event"
 			},
 			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "_receiver",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "_amount",
+						"type": "uint256"
+					}
+				],
+				"name": "TransferSent",
+				"type": "event"
+			},
+			{
 				"inputs": [],
 				"name": "getBalance",
 				"outputs": [
@@ -116,11 +135,11 @@
 	},
 	"sources": {
 		"contracts/VolcanoCoin.sol": {
-			"keccak256": "0x607a1b1b3f3f7e856aa896cd1f944a9926ae90e57318a564bb7c7d963790c681",
+			"keccak256": "0x65d00cea06e756de3c84ac03e4c1bf962db780889c1b901ab46968fb2a6cc3bd",
 			"license": "UNLICENSED",
 			"urls": [
-				"bzz-raw://9ac95c6aaf58753bc79e77cd77ad78f552d81fade08ca16c39d9a687d9b825bc",
-				"dweb:/ipfs/Qmc3fr5KQ1T5Vnbs61KQcMSgKs5RdQsQww2jcu8sCFF7vE"
+				"bzz-raw://c484a3f034b103c83626b38c477997081a79e673b04024aa4360e0d541074341",
+				"dweb:/ipfs/QmShH6jgopgszUbxsKSDLTQgKikyDr5yPwokqV4nNyVKxG"
 			]
 		}
 	},
