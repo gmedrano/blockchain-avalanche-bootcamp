@@ -1,6 +1,7 @@
 //SPDX-License-Identifier: UNLICENSED
 
 pragma solidity ^0.8.0;
+import "hardhat/console.sol";
 
 contract VolcanoCoin {
     uint totalSupply;
@@ -17,6 +18,7 @@ contract VolcanoCoin {
         totalSupply = 10000;
         owner = msg.sender;
         balances[owner] = totalSupply;
+        console.log(totalSupply);
     }
     
     modifier onlyOwner() {
